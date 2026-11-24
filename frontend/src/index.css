@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#0B0F19] dark:text-slate-100 antialiased transition-colors duration-200;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Scrollbar for High-Density SOC Logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Glassmorphism Panel Utilities */
+.soc-glass-panel {
+  backdrop-filter: blur(12px);
+}
+.dark .soc-glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+:not(.dark) .soc-glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.soc-glow-red {
+  box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.35);
+}
+
+.soc-glow-orange {
+  box-shadow: 0 0 15px -3px rgba(249, 115, 22, 0.35);
+}
+
+.soc-glow-yellow {
+  box-shadow: 0 0 15px -3px rgba(234, 179, 8, 0.35);
+}
+
+.soc-glow-green {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.35);
+}
+
+.soc-glow-blue {
+  box-shadow: 0 0 15px -3px rgba(59, 130, 246, 0.35);
+}
